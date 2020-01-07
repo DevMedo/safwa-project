@@ -17,6 +17,11 @@
   top: -2em;
 }
 
+.logo img {
+  width: 110px;
+  padding-top: 8px;
+}
+
 .logo-visual {
   display: none;
   position: absolute;
@@ -176,8 +181,8 @@ content: "";
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  height: 80px;
-  width: 80px;
+  height: 40px;
+  width: 40px;
   outline: transparent;
   background-size: 100%, 100%;
   border: 1px solid transparent;
@@ -566,8 +571,8 @@ box-shadow: 1px 1px 25px 1px rgba(90, 35, 124, 0.562);
 }
 
 .map-safwa {
-  width: 600px;
-  height: 450px;
+  width: 400px;
+  height: 300px;
 }
 
 @media only screen and (max-width: 768px) {
