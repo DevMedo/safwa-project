@@ -39,3 +39,61 @@
 			});
 
 })(jQuery);
+
+$(document).ready(function(){
+   
+	var a = 0;
+	
+	$(window).scroll(function() {
+	  var sections = $('section')
+	  , nav = $('nav')
+	  , nav_height = nav.outerHeight();
+	 
+	
+	  var oTop = $('#counter').offset().top - window.innerHeight;
+	  if (a == 0 && $(window).scrollTop() > oTop) {
+		var cur_pos = $(this).scrollTop();
+	 
+		sections.each(function() {
+		  var top = $(this).offset().top - nav_height,
+			  bottom = top + $(this).outerHeight();
+	   
+		  if (cur_pos >= top && cur_pos <= bottom) {
+			nav.find('a').removeClass('active');
+			sections.removeClass('active');
+	   
+			$(this).addClass('active');
+			nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+		  }
+		});
+		$('.counter-value').each(function() {
+		  var $this = $(this),
+			countTo = $this.attr('data-count');
+		  $({
+			countNum: $this.text()
+		  }).animate({
+			  countNum: countTo
+			},
+	
+			{
+	
+			  duration: 2000,
+			  easing: 'swing',
+			  step: function() {
+				$this.text(Math.floor(this.countNum));
+			  },
+			  complete: function() {
+				$this.text(this.countNum);
+				//alert('finished');
+			  }
+	
+			});
+		});
+		a = 1;
+	  }
+	});
+	   
+	});
+	
+	
+	
