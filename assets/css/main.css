@@ -13,7 +13,7 @@
   position: absolute;
   opacity: 0.05;
   width: 30em;
-  left: -4.5em;
+  right: 75vh;
   top: -2em;
 }
 
@@ -63,7 +63,7 @@
   position: absolute;
   opacity: 0.1;
   width: 25em;
-  right: 34em;
+  right: 48vh;
 }
 
 .nhr {
